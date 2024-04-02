@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>DOM BURGUER - HAMBURGUERIA ARTESANAL</title>
+  </head>
+  <body>
+    <div class="w-full h-[48px] bg-yellom"></div>
+    <header class="w-full h-[320px] bg-zinc-900 bg-home bg-cover bg-center">
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <img
+          src="./assets/logo.png"
+          alt="Logo"
+          class="w-32 h-32 rounded-full hover:scale-110 duration-200"
+        />
+        <h1 class="text-3xl mt-4 mb-2 font-bold text-white">DOM Burguer</h1>
+        <span class="text-white font-medium"
+          >AV Calistrato Muller 1373 - Portinho</span
+        >
+        <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+          <span class="text-white">Ter á Dom - 19:00 as 23:30</span>
+        </div>
+      </div>
+    </header>
+
+    <h2 class="text-white text-2xl md:text-3xl font-bold text-center mt-9 mb-8">
+      Conheça nosso menu, <br />
+      faça seu pedido!
+    </h2>
+
+    <div id="menu">
+      <main
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-14 mx-auto max-w-6xl px-2 mb-10"
+      >
+        <!-- Produto 01 item -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-1.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-BURGUER</p>
+            <p class="text-sm text-white">
+              PÃO HAMBÚRGUER PRESUNTO QUEIJO BATATAS FRITAS.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 15.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-BURGUER"
+                data-price="15.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 01 item -->
+
+        <!-- Produto item 02 -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-2.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-SALADA</p>
+            <p class="text-sm text-white">
+              PÃO HAMBÚRGUER QUEIJO PRESUNTO ALFACE TOMATE PEPINO MILHO BATATAS
+              FRITAS.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 16.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-SALADA"
+                data-price="16.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 02 item -->
+        <!-- Produto item 03 -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-3.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-EGG</p>
+            <p class="text-sm text-white">
+              PÃO HAMBÚRGUER PRESUNTO QUEIJO OVO ALFACE TOMATE PEPINO MILHO
+              BATATA FRITAS.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 22.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-EGG"
+                data-price="22.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 03 item -->
+        <!-- Produto item 04 -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-4.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-DOG</p>
+            <p class="text-sm text-white">
+              PÃO HAMBÚRGUER PRESUNTO QUEIJO SALSICHA ALFACE TOMATE PEPINO MILHO
+              BATATA FRITAS.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 20.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-DOG"
+                data-price="20.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 04 item -->
+        <!-- Produto item 05 -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-4.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-MONSTER BURGUER</p>
+            <p class="text-sm text-white">
+              PÃO 2 HAMBÚRGUER QUEIJO PRESUNTO CALABRESA OVOS CHEDAAR ALFACE
+              BATATA FRITA.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 40.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-MONSTER BURGUER"
+                data-price="40.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 06 item -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-4.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-BACON</p>
+            <p class="text-sm text-white">
+              PÃO HAMBÚRGUER PRESUNTO QUEIJO BACON ALFACE TOMATE PEPINO MILHO
+              BATATA FRITAS.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 24.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-BACON"
+                data-price="24.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 06 item -->
+        <!-- Fim Produto 07 item -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-4.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-CALABRESA</p>
+            <p class="text-sm text-white">
+              PÃO HAMBÚRGUER PRESUNTO QUEIJO CALABRESA ALFACE TOMATE PEPINO
+              MILHO BATATA FRITAS.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 26.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-CALABRESA"
+                data-price="26.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 07 item -->
+        <!-- Fim Produto 08 item -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-4.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-FRANGO</p>
+            <p class="text-sm text-white">
+              PÃO FRANGO QUEIJO PRESUNTO ALFACE TOMATE PEPINO MILHO BATATA
+              FRITAS.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 26.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-FRANGO"
+                data-price="26.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 08 item -->
+        <!-- Fim Produto 09 item -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-4.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-FRANGO CREMOSO</p>
+            <p class="text-sm text-white">
+              PAÕ FRANGO AO CREME TOMATE PALMITO BATATA FRITAS.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 30.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-FRANGO CREMOSO"
+                data-price="30.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 09 item -->
+        <!-- Fim Produto 10 item -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-4.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-CORAÇÃO</p>
+            <p class="text-sm text-white">
+              PÃO HAMBÚRGUER PRESUNTO QUEIJO CORAÇÃO ALFACE TOMATE PEPINO MILHO
+              BATATA FRITAS.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 30.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-CORAÇÃO"
+                data-price="30.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 10 item -->
+        <!-- Fim Produto 11 item -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-4.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-BURGUER DUPLO</p>
+            <p class="text-sm text-white">
+              PÃO 2 HAMBÚRGUER QUEIJO PRESUNTO CHEDDAR BATATA FRITAS.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 30.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-BURGUER DUPLO"
+                data-price="30.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 11 item -->
+        <!-- Fim Produto 12 item -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-4.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-ESPECIAL</p>
+            <p class="text-sm text-white">
+              PÃO HAMBÚRGUER PRESUNTO QUEIJO OVO BACON ALFACE TOMATE PEPINO
+              MILHO BATATA FRITAS.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 30.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-ESPECIAL"
+                data-price="30.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 12 item -->
+        <!-- Fim Produto 13 item -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-4.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-DOM DA CASA</p>
+            <p class="text-sm text-white">
+              PÃO HAMBÚRGUER PRESUNTO QUEIJO OVO CALABRESA BACON SALSINHA FRANGO
+              CHEDAAR ALFACE TOMATE PEPINO MILHO BATATAS FRITAS
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 40.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-DOM DA CASA"
+                data-price="40.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 13 item -->
+        <!-- Fim Produto 14 item -->
+        <div class="flex gap-3">
+          <img
+            src="./assets/hamb-4.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div>
+            <p class="font-bold text-color">X-TRIBOM</p>
+            <p class="text-sm text-white">
+              PÃO HAMBÚRGUER PRESUNTO QUEIJO OVO CALABRESA BACON SALSINHA FRANGO
+              CHEDAAR ALFACE TOMATE PEPINO MILHO BATATAS FRITAS
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 50.00</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="X-TRIBOM"
+                data-price="50.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto 14 item -->
+      </main>
+      <div class="mx-auto max-w-6xl px-2 my-2">
+        <h2 class="font-bold text-3xl text-white">Bebidas</h2>
+      </div>
+      <!-- GRID BEDIDAS -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-14 mx-auto max-w-6xl px-2 mb-10"
+      >
+        <!-- Produto item -->
+        <div class="flex gap-3 w-full">
+          <img
+            src="./assets/refri-1.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div class="w-[350px]">
+            <p class="font-bold text-color">Coca Lata</p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 6</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="Coca Lata"
+                data-price="6"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto item -->
+        <!-- Produto item -->
+        <div class="flex gap-3 w-full">
+          <img
+            src="./assets/refri-2.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div class="w-[350px]">
+            <p class="font-bold text-color">Guarana Lata</p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 6</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="Guarana Lata"
+                data-price="6"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto item -->
+      </div>
+      <!-- Fim grid bebidas -->
+      <!-- PATEIS -->
+      <div class="mx-auto max-w-6xl px-2 my-2">
+        <h2 class="font-bold text-3xl text-white">Pastel</h2>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-14 mx-auto max-w-6xl px-2 mb-10"
+      >
+        <!-- Produto item -->
+        <div class="flex gap-3 w-full">
+          <img
+            src="./assets/refri-2.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div class="w-[350px]">
+            <p class="font-bold text-color">PASTEL CARNE C/QUEIJO</p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 6</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name=" PASTEL CARNE C/QUEIJO"
+                data-price="6"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto item -->
+        <!-- Produto item -->
+        <div class="flex gap-3 w-full">
+          <img
+            src="./assets/refri-2.png"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div class="w-[350px]">
+            <p class="font-bold text-color">PASTEL FRANGO C/CATUPIRY</p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 6</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="PASTEL FRANGO C/CATUPIRY"
+                data-price="6"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto item -->
+      </div>
+      <!-- FIM  PATEIS -->
+      <!-- Porções -->
+      <div class="mx-auto max-w-6xl px-2 my-2">
+        <h2 class="font-bold text-3xl text-white">Porções</h2>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-14 mx-auto max-w-6xl px-2 mb-10"
+      >
+        <!-- Produto item -->
+        <div class="flex gap-3 w-full">
+          <img
+            src="./assets/porcoes/frango-passarinho.jpeg"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div class="w-[350px]">
+            <p class="font-bold text-color">Frango a passarinho com batata</p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 49,90</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="Frango a passarinho com batata"
+                data-price="49.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto item -->
+        <!-- Produto item -->
+        <div class="flex gap-3 w-full">
+          <img
+            src="./assets/porcoes/coracao-batata.jpeg"
+            alt="hamburguer smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+          <div class="w-[350px]">
+            <p class="font-bold text-color">Coração batata e farofa</p>
+
+            <div class="flex items-center gap-2 justify-between mt-7">
+              <p class="bg-yellom p-1 rounded text-white">R$ 74,90</p>
+              <button
+                class="bg-green-500 rounded px-4 py-1 add-to-cart-btn"
+                data-name="Coração batata e farofa"
+                data-price="74.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Produto item -->
+      </div>
+      <!-- FIM PORÇÕES -->
+    </div>
+    <!-- FIM MENU -->
+    <!-- MODAL CART -->
+    <div
+      class="hidden bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center"
+    >
+      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-center font-bold text-2xl mb-3">Meu Carrinho</h2>
+        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+        <p class="font-bold">Total R$<span id="cart-total">00.00</span></p>
+        <p class="font-bold mt-4">Endereço de entrega</p>
+        <input
+          type="text"
+          id="address"
+          placeholder="Digite o endereço..."
+          class="w-full border-2 border-gray-300 rounded-md py-2 px-1 mt-3"
+        />
+        <p class="text-red-500 font-bold hidden" id="address-warn">
+          Digite o endereço completo
+        </p>
+
+        <div class="flex items-center justify-between mt-5 w-full">
+          <button
+            id="close-modal"
+            class="bg-red-500 text-white px-4 py-1 rounded"
+          >
+            Fechar
+          </button>
+          <button
+            id="checkout-btn"
+            class="bg-green-500 text-white px-4 py-1 rounded"
+          >
+            Finalizar Pedido
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Fim MODAL CART -->
+    <footer
+      class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center mt-3"
+    >
+      <button class="text-white font-bold flex items-center gap-2">
+        (<span id="cart-count">2</span>) Ver meu carrinho
+        <i class="fa fa-cart-plus text-lg text-white"></i>
+      </button>
+    </footer>
+  </body>
+</html>
