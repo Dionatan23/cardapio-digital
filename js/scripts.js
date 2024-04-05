@@ -157,23 +157,23 @@ observacoes.addEventListener("input", function (event){
 
 // Finalizar  compra
 checkoutBtn.addEventListener("click", function (){
-  // const isOpen = checkRestaurante();
+  const isOpen = checkRestaurante();
   
-  // if(!isOpen) {
+  if(!isOpen) {
     
-  //   Toastify({
-  //     text: "Ops! Restaurante está fechado!",
-  //     duration: 3000,
-  //     close: true,
-  //     gravity: "top",
-  //     position: "right",
-  //     stopOnFocus: true,
-  //     style: {
-  //       background: "#ef4444",
-  //     },
-  //   }).showToast();
-  //   return;
-  // }
+    Toastify({
+      text: "Ops! Restaurante está fechado!",
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "#ef4444",
+      },
+    }).showToast();
+    return;
+  }
 
   if(cart.length === 0) return;
   if(addressInput.value === "" && observacoes.value ===""){
