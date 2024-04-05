@@ -53,12 +53,25 @@ function addToCart(name, price) {
       quanty: 1,
     });
   }
+
+  Toastify({
+    text: "Item adicionado ao carrinho!",
+    duration: 3000,
+    close: true,
+    gravity: "top",
+    position: "right",
+    stopOnFocus: true,
+    style: {
+      background: "#10b981",
+    },
+  }).showToast();
   updateCartModal();
 }
 
+let total = 0;
 function updateCartModal() {
   cartItemsContainer.innerHTML = "";
-  let total = 0;
+
 
   cart.forEach((item) => {
     const cartItemElement = document.createElement("div");
@@ -109,6 +122,17 @@ function removeItem(name){
     }
 
     cart.splice(index, 1);
+    Toastify({
+      text: "Item removido do carrinho!",
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "#ef4444",
+      },
+    }).showToast();
     updateCartModal();
 }
 
@@ -133,23 +157,23 @@ observacoes.addEventListener("input", function (event){
 
 // Finalizar  compra
 checkoutBtn.addEventListener("click", function (){
-  const isOpen = checkRestaurante();
+  // const isOpen = checkRestaurante();
   
-  if(!isOpen) {
+  // if(!isOpen) {
     
-    Toastify({
-      text: "Ops! Restaurante está fechado!",
-      duration: 3000,
-      close: true,
-      gravity: "top",
-      position: "right",
-      stopOnFocus: true,
-      style: {
-        background: "#ef4444",
-      },
-    }).showToast();
-    return;
-  }
+  //   Toastify({
+  //     text: "Ops! Restaurante está fechado!",
+  //     duration: 3000,
+  //     close: true,
+  //     gravity: "top",
+  //     position: "right",
+  //     stopOnFocus: true,
+  //     style: {
+  //       background: "#ef4444",
+  //     },
+  //   }).showToast();
+  //   return;
+  // }
 
   if(cart.length === 0) return;
   if(addressInput.value === "" && observacoes.value ===""){
@@ -169,8 +193,9 @@ checkoutBtn.addEventListener("click", function (){
 
   const message = encodeURIComponent(cartItems);
   const phone = "48996049929";
+  const infos = `Total R$ ${total.toFixed(2)} - Endereço: ${addressInput.value}`;
 
-  window.open(`https://wa.me/${phone}?text=${message} Endereço:  ${addressInput.value}`, "_blank");
+  window.open(`https://wa.me/${phone}?text=${message} | ${infos}`, "_blank");
 
   cart = [];
   updateCartModal();
