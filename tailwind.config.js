@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        "home": "url('/assets/bg.png')"
+        "home": "url('/assets/bg-interno.jpeg')"
       },
       textColor:{
         "color": "#f59e0b"

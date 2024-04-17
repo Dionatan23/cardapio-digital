@@ -1973,8 +1973,12 @@ video {
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-5 {
+  --tw-bg-opacity: 0.05;
+}
+
 .bg-home {
-  background-image: url('/assets/bg.png');
+  background-image: url('/assets/bg-interno.jpeg');
 }
 
 .decoration-slice {
@@ -2131,10 +2135,6 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.pb-5 {
-  padding-bottom: 1.25rem;
 }
 
 .pb-7 {
